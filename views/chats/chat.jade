@@ -1,0 +1,17 @@
+div(data-role="page")
+	script(type='text/javascript', src='/socket.io/socket.io.js')
+	script(type='text/javascript', src='/javascripts/chat.js')
+	div(data-role="header")
+		h1 #{chat.title}
+	div(data-role="content")
+		ul#entries(data-id=chat.id, data-role="listview", data-theme="d", data-inset="true")
+			- each e in chat.entries
+				li #{e.timestamp} - #{e.user} says #{e.text}
+		div(data-role="fieldcontain")
+			label(for="chatEntry") Text:
+			textarea#chatEntry(cols="40", rows="8", name="chatEntry")
+		input#chatSubmit(type="button", value="Enter")
+	div(data-role="footer")
+		p brought to you by 
+			a(href="http://about.me/joshzana") josh
+			

@@ -1,0 +1,12 @@
+div(data-role="page")
+	div(data-role="header")
+		h1 You have #{count} chats
+	div(data-role="content")
+		ul(data-role="listview")
+			- each c in chats
+				li
+					a(href="/chats/" + c.id)	#{c.title}
+	div(data-role="footer")
+		p brought to you by 
+			a(href="http://about.me/joshzana") josh
+			
