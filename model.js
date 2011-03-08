@@ -38,5 +38,7 @@ exports.create = function(title, entries, callback){
   var chat = new Chat();
   chat.title = title;
   chat.entries = entries;
-  chat.save(callback);
+  chat.save(function() {
+	  callback(chat);
+  });
 }

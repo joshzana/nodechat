@@ -64,6 +64,13 @@ app.get("/chats", function(req, res){
   });
 });
 
+// new action
+app.get("/chats/new", function(req, res){
+    model.create("test chat", [], function(chat) {
+    	res.redirect("/chats/" + chat.id);
+    });
+});
+
 // test
 app.get("/test", function(req, res){
   
