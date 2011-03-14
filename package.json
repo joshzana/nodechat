@@ -1,7 +1,7 @@
 { "name": "nodechat"
 , "description": "websocket based mobile chat in node.js"
 , "version": "0.0.1"
-, "main" : "./app.js"
+, "main" : "./server.js"
 , "repository":
   { "type": "git"
   , "url": "git://github.com/joshzana/nodechat.git"
