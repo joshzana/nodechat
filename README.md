@@ -16,7 +16,9 @@ To run
 	- install mongodb
 	- run mongod
 	- install node
-	- npm install express,mongoose,socket.io
-	- node app.js
+	- npm install express
+	- npm install mongoose
+	- npm install socket.io
+	- node server.js
 	- view http://localhost:3000/chats in two or more browsers, and party on the same chat!
 
