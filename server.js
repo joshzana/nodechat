@@ -22,12 +22,12 @@ app.configure(function(){
   app.use(express.static(__dirname + '/public'));
 });
 
-app.configure('production', function(){
+app.configure('development', function(){
   console.log('dev mode');
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
   db = mongoose.connect('mongodb://localhost/nodechat');
 });
-/*
+
 app.configure('production', function(){
   console.log('prod mode');
   app.use(express.errorHandler()); 
@@ -39,7 +39,6 @@ app.configure('test', function() {
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
   db = mongoose.connect('mongodb://localhost/nodechat-test');
 });
-*/
 
 var model = require('./model.js');
 

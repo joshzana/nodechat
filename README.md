@@ -14,9 +14,11 @@ Components used
 To run
 ---
 	- install mongodb
+	- create data directory
 	- run mongod
 	- install node
 	- npm install express
+	- npm install jade
 	- npm install mongoose
 	- npm install socket.io
 	- node server.js
