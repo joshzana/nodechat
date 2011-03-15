@@ -56,7 +56,9 @@ app.get('/', function(req, res){
 app.get("/chats", function(req, res){
 console.log("searching");
   model.findAll(function(err, chats) {
-console.log("searched");
+  	if(err) {
+  		throw err;
+  	}
      res.render("chats/index.jade", {
        locals: {
          chats:chats,
